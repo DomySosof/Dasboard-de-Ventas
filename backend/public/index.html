@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Panel de Ventas y Asociados</title>
+<link rel="icon" href="data:,">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+<div class="app-shell">
+
+  <aside class="sidebar">
+    <div class="brand">
+      <span class="brand-mark">✺</span>
+      <div class="brand-text">
+        <strong>Panel Operativo</strong>
+        <span>Ventas &amp; Asociados</span>
+      </div>
+    </div>
+
+    <nav class="nav">
+      <button class="nav-item is-active" data-view="dashboard">
+        <span class="nav-ico">◱</span> Dashboard
+      </button>
+      <button class="nav-item" data-view="ventas">
+        <span class="nav-ico">◫</span> Datos de venta
+      </button>
+      <button class="nav-item" data-view="asociados">
+        <span class="nav-ico">◔</span> Asociados
+      </button>
+      <button class="nav-item" data-view="aliados">
+        <span class="nav-ico">⬡</span> Aliados
+      </button>
+      <button class="nav-item" data-view="tiposervicio">
+        <span class="nav-ico">◈</span> Tipos de servicio
+      </button>
+      <button class="nav-item" data-view="metas">
+        <span class="nav-ico">◎</span> Metas
+      </button>
+      <button class="nav-item" data-view="pos">
+        <span class="nav-ico">◧</span> Bancos / POS
+      </button>
+      <button class="nav-item" data-view="backup">
+        <span class="nav-ico">⇅</span> Backup
+      </button>
+    </nav>
+
+    <div class="sidebar-foot">
+      <span id="conn-status" class="conn-dot" title="Conexión con el servidor">●</span>
+      <span>Datos guardados localmente en SQLite</span>
+    </div>
+  </aside>
+
+  <main class="content">
+    <header class="content-header">
+      <div class="content-header-top">
+        <h1 id="view-title">Dashboard</h1>
+        <div class="topbar-tools">
+          <div class="search-box">
+            <span>⌕</span>
+            <input type="text" id="global-search" placeholder="Buscar folio, asociado, aliado…" />
+          </div>
+          <div class="avatar" title="Panel operativo">PO</div>
+        </div>
+      </div>
+      <div id="view-actions" class="view-actions"></div>
+    </header>
+
+    <div id="view-root" class="view-root">
+      <!-- las vistas se inyectan aquí -->
+    </div>
+  </main>
+</div>
+
+<div id="toast" class="toast"></div>
+
+<script src="/vendor/chart.umd.js"></script>
+<script src="/js/api.js"></script>
+<script src="/js/ui.js"></script>
+<script src="/js/dashboard.js"></script>
+<script src="/js/ventas.js"></script>
+<script src="/js/asociados.js"></script>
+<script src="/js/aliados.js"></script>
+<script src="/js/tiposervicio.js"></script>
+<script src="/js/metas.js"></script>
+<script src="/js/pos.js"></script>
+<script src="/js/backup.js"></script>
+<script src="/js/app.js"></script>
+</body>
+</html>

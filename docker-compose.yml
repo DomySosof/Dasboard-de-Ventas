@@ -1,0 +1,13 @@
+services:
+  app:
+    build:
+      context: ./backend
+    container_name: dashboard-turismo
+    restart: unless-stopped
+    ports:
+      - "45000:3000"
+    volumes:
+      - ./data:/app/data
+    environment:
+      - PORT=3000
+      - DATA_DIR=/app/data

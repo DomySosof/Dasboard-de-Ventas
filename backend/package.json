@@ -1,0 +1,18 @@
+{
+  "name": "dashboard-turismo-backend",
+  "version": "1.0.0",
+  "description": "API + servidor del Dashboard de Ventas y Asociados",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "seed-demo": "node src/scripts/seed-demo.js"
+  },
+  "dependencies": {
+    "better-sqlite3": "^11.3.0",
+    "chart.js": "^4.4.4",
+    "cors": "^2.8.5",
+    "express": "^4.21.0",
+    "multer": "^2.0.1",
+    "xlsx": "^0.18.5"
+  }
+}
